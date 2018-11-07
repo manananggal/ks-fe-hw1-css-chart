@@ -5,27 +5,335 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>HTML-CSS Bar Chart for Exchange Rates | MO Musial</title>
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./css/normalize.css" />
+<link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <div class="chart-container">
-    <div class="chart-header">
+  <div class="Chartbar-container">
+    <div class="Chartbar-header">
         <h1>Currency Exchange Rates</h1>
     </div>
-    <div class="chart">
-        <div class="bar-1" onClick="alert('EUR 1 = USD 1.137')"><h2>USD $</h2></div>
-        <div class="bar-2" onClick="alert('EUR 1 = JPY 128.81')"><h2>JPY ¥</h2></div>
-        <div class="bar-3" onClick="alert('EUR 1 = GBP 0.87535')"><h2>GBP £</h2></div>
-        <div class="bar-4" onClick="alert('EUR 1 = PLN 4.3126')"><h2>PLN zł</h2></div>
-        <div class="bar-5" onClick="alert('EUR 1 = ISK 137.9')"><h2>ISK kr</h2></div>
-        <div class="bar-6" onClick="alert('EUR 1 = RUB 75.4376')"><h2>RUB ₽</h2></div>
-        <div class="bar-7" onClick="alert('EUR 1 = CAD 1.4887')"><h2>CAD $</h2></div>
-        <div class="bar-8" onClick="alert('EUR 1 = CNY 7.878')"><h2>CNY ¥</h2></div>
-        <div class="bar-9" onClick="alert('EUR 1 = HKD 8.9047')"><h2>HKD $</h2></div>
-        <div class="bar-10" onClick="alert('EUR 1 = INR 83.092')"><h2>INR ₹</h2></div>
-        <div class="bar-11" onClick="alert('EUR 1 = MXN 22.8514')"><h2>MXN $</h2></div>
-        <div class="bar-12" onClick="alert('EURO is base currency')"><h2>EUR €</h2></div>
+    <div class="Chartbar">
+      <svg width="100%" height="100%" viewBox="0 0 1075 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch VERSION 2 -->
+        <desc>Created with Sketch.</desc>
+        <defs>
+          <!-- for EUR -->
+            <rect id="path-1" x="0" y="0.529411765" width="80" height="456.470588" rx="5"></rect>
+            <filter x="-8.8%" y="-1.1%" width="117.5%" height="103.1%" filterUnits="objectBoundingBox" id="filter-2">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-2.7%" width="136.3%" height="106.4%" filterUnits="objectBoundingBox" id="filter-3">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for MXN -->
+            <rect id="path-4" x="0" y="0" width="80" height="137" rx="5"></rect>
+            <filter x="-8.8%" y="-3.6%" width="117.5%" height="110.2%" filterUnits="objectBoundingBox" id="filter-5">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-9.1%" width="136.2%" height="121.2%" filterUnits="objectBoundingBox" id="filter-6">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for INR -->
+            <rect id="path-7" x="0" y="0" width="80" height="95" rx="5"></rect>
+            <filter x="-8.8%" y="-5.3%" width="117.5%" height="114.7%" filterUnits="objectBoundingBox" id="filter-8">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-13.2%" width="136.2%" height="130.5%" filterUnits="objectBoundingBox" id="filter-9">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for HKD -->
+            <rect id="path-10" x="0" y="0" width="80" height="151" rx="5"></rect>
+            <filter x="-8.8%" y="-3.3%" width="117.5%" height="109.3%" filterUnits="objectBoundingBox" id="filter-11">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-8.3%" width="136.2%" height="119.2%" filterUnits="objectBoundingBox" id="filter-12">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for CNY -->
+            <rect id="path-13" x="0" y="0" width="80" height="216" rx="5"></rect>
+            <filter x="-8.8%" y="-2.3%" width="117.5%" height="106.5%" filterUnits="objectBoundingBox" id="filter-14">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-5.8%" width="136.2%" height="113.4%" filterUnits="objectBoundingBox" id="filter-15">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for CAD -->
+            <rect id="path-16" x="0" y="0" width="80" height="335" rx="5"></rect>
+            <filter x="-8.8%" y="-1.5%" width="117.5%" height="104.2%" filterUnits="objectBoundingBox" id="filter-17">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-3.7%" width="136.2%" height="108.7%" filterUnits="objectBoundingBox" id="filter-18">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for RUB -->
+            <rect id="path-19" x="0" y="0" width="80" height="131" rx="5"></rect>
+            <filter x="-8.8%" y="-3.8%" width="117.5%" height="110.7%" filterUnits="objectBoundingBox" id="filter-20">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-9.5%" width="136.2%" height="122.1%" filterUnits="objectBoundingBox" id="filter-21">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for ISK -->
+            <rect id="path-22" x="2" y="0" width="80" height="56" rx="5"></rect>
+            <filter x="-8.8%" y="-8.9%" width="117.5%" height="125.0%" filterUnits="objectBoundingBox" id="filter-23">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-22.3%" width="136.2%" height="151.8%" filterUnits="objectBoundingBox" id="filter-24">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+            <filter x="-8.3%" y="-21.7%" width="116.7%" height="160.9%" filterUnits="objectBoundingBox" id="filter-26">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+          <!-- for PLN -->
+            <rect id="path-27" x="0" y="0" width="80" height="260" rx="5"></rect>
+            <filter x="-8.8%" y="-1.9%" width="117.5%" height="105.4%" filterUnits="objectBoundingBox" id="filter-28">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-4.8%" width="136.2%" height="111.2%" filterUnits="objectBoundingBox" id="filter-29">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for GBP -->
+            <rect id="path-30" x="0" y="0" width="80" height="485" rx="5"></rect>
+            <filter x="-8.8%" y="-1.0%" width="117.5%" height="102.9%" filterUnits="objectBoundingBox" id="filter-31">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-2.6%" width="136.2%" height="106.0%" filterUnits="objectBoundingBox" id="filter-32">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for JPY -->
+            <rect id="path-33" x="0" y="0" width="80" height="89" rx="5"></rect>
+            <filter x="-8.8%" y="-5.6%" width="117.5%" height="115.7%" filterUnits="objectBoundingBox" id="filter-34">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-14.0%" width="136.2%" height="132.6%" filterUnits="objectBoundingBox" id="filter-35">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+          <!-- for USD -->
+            <rect id="path-36" x="0" y="0" width="80" height="430" rx="5" ></rect>
+            <filter x="-8.8%" y="-1.2%" width="117.5%" height="103.3%" filterUnits="objectBoundingBox" id="filter-37">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <filter x="-18.1%" y="-2.9%" width="136.2%" height="106.7%" filterUnits="objectBoundingBox" id="filter-38">
+                <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+        </defs>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="ChartBar" transform="translate(4.000000, 2.000000)">
+                <g class="Chartbar-bar" transform="translate(987.000000, 28.000000)">
+                    <g class="ChartBar-bar" fill-rule="nonzero" onClick="alert('EURO is base currency')">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#0E74D9" xlink:href="#path-1"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="1.02941176" width="79" height="455.470588" rx="5"></rect>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" letter-spacing="-0.600000024" fill="#F1F3F5">
+                        <tspan x="7.56767583" y="30">EUR €</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(898.000000, 348.000000)" onClick="alert('EUR 1 = MXN 22.8514')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="#17A175" xlink:href="#path-4"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-4"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="136" rx="5"></rect>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" letter-spacing="-1.20000005" fill="#F1F3F5">
+                        <tspan x="5.82871103" y="27">MXN $</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(808.000000, 390.000000)" onClick="alert('EUR 1 = INR 83.092')">
+                    <g fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                        <use fill="#0E74D9" xlink:href="#path-7"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-7"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="94" rx="5"></rect>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" fill="#F1F3F5">
+                        <tspan x="9.39092969" y="23">INR ₹</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(719.000000, 334.000000)" onClick="alert('EUR 1 = HKD 8.9047')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+                        <use fill="#17A175" xlink:href="#path-10"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-10"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="150" rx="5"></rect>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" fill="#F1F3F5">
+                        <tspan x="4.36474609" y="27">HKD $</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(630.000000, 269.000000)" onClick="alert('EUR 1 = CNY 7.878')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+                        <use fill="#0E74D9" xlink:href="#path-13"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-15)" xlink:href="#path-13"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="215" rx="5"></rect>
+                    </g>
+                    <text id="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" letter-spacing="-2.5" fill="#F1F3F5">
+                        <tspan x="7.09375" y="28">CNY ¥</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(540.000000, 150.000000)" onClick="alert('EUR 1 = CAD 1.4887')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-17)" xlink:href="#path-16"></use>
+                        <use fill="#17A175" xlink:href="#path-16"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-18)" xlink:href="#path-16"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="334" rx="5"></rect>
+                    </g>
+                    <text id="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" fill="#F1F3F5">
+                        <tspan x="6.30371094" y="26">CAD $</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(451.000000, 354.000000)" onClick="alert('EUR 1 = RUB 75.4376')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-20)" xlink:href="#path-19"></use>
+                        <use fill="#0E74D9" xlink:href="#path-19"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-21)" xlink:href="#path-19"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="130" rx="5"></rect>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" fill="#F1F3F5">
+                        <tspan x="7.13045446" y="26">RUB </tspan>
+                        <tspan x="64.6988138" y="26" font-family=".HelveticaNeueDeskInterface-Regular, .Helvetica Neue DeskInterface">₽</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(357.000000, 429.000000)" onClick="alert('EUR 1 = ISK 137.9')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-23)" xlink:href="#path-22"></use>
+                        <use fill="#17A175" xlink:href="#path-22"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-24)" xlink:href="#path-22"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="2.5" y="0.5" width="79" height="55" rx="5"></rect>
+                    </g>
+                    <g class="ChartBar-text" fill="#F1F3F5" fill-opacity="1">
+                        <use filter="url(#filter-26)" xlink:href="#text-25"></use>
+                        <use xlink:href="#text-25"></use>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" letter-spacing="-2.4000001" fill="#F1F3F5">
+                        <tspan x="6.28710961" y="25">ISK kr</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(268.000000, 225.000000)" onClick="alert('EUR 1 = PLN 4.3126')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-28)" xlink:href="#path-27"></use>
+                        <use fill="#0E74D9" xlink:href="#path-27"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-29)" xlink:href="#path-27"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="259" rx="5"></rect>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" letter-spacing="-1.60000002" fill="#F1F3F5">
+                        <tspan x="7.36279303" y="26">PLN zł</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(179.000000, 0.000000)" onClick="alert('EUR 1 = GBP 0.87535')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-31)" xlink:href="#path-30"></use>
+                        <use fill="#17A175" xlink:href="#path-30"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-32)" xlink:href="#path-30"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="484" rx="5"></rect>
+                    </g>
+                    <text id="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" fill="#F1F3F5">
+                        <tspan x="6.30371094" y="29">GBP £</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar" transform="translate(89.000000, 396.000000)" onClick="alert('EUR 1 = JPY 128.81')">
+                    <g class="ChartBar-bar" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-34)" xlink:href="#path-33"></use>
+                        <use fill="#0E74D9" xlink:href="#path-33"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-35)" xlink:href="#path-33"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="88" rx="5"></rect>
+                    </g>
+                    <text class="ChartBar-text" font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" letter-spacing="-0.699999988" fill="#F1F3F5">
+                        <tspan x="6.52060544" y="25">JPY ¥</tspan>
+                    </text>
+                </g>
+                <g class="Chartbar-bar Chartbar-bar-green" transform="translate(0.000000, 55.000000)" onClick="alert('EUR 1 = USD 1.137')">
+                    <g fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-37)" xlink:href="#path-36"></use>
+                        <use fill="#17A175" xlink:href="#path-36"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-38)" xlink:href="#path-36"></use>
+                        <rect stroke="#F5A623" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="429" rx="5"></rect>
+                    </g>
+                    <text font-family="EngraversMT, Engravers MT" font-size="18" font-style="expanded" font-weight="normal" fill="#F1F3F5">
+                        <tspan x="6.33789062" y="29" class="ChartBar-text">USD $</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+      </svg>
       </div>
     </div>
 </body>
